@@ -13,11 +13,29 @@ class ControleEstoque {
         
         System.out.println("Dados do Smartphone:");
         System.out.println("smartphone: " +nomeProduto );
+        System.out.println("Dados do Smartphone:");
+        System.out.println("smartphone: " +marcaProduto );
+        System.out.println("Dados do Smartphone:");
+        System.out.println("smartphone: " +preçoProduto );
+        System.out.println("Dados do Smartphone:");
+        System.out.println("smartphone: " +estoqueProduto );
         
         System.out.println("Dados do Laptop:");
         System.out.println("smartphone: " +nomeProduto );
+        System.out.println("Dados do Laptop:");
+        System.out.println("smartphone: " +marcaProduto );
+        System.out.println("Dados do Laptop:");
+        System.out.println("smartphone: " +preçoProduto );
+        System.out.println("Dados do Laptop:");
+        System.out.println("smartphone: " +estoqueProduto );
         
         System.out.println("Dados do Fone Bluetooth:");
         System.out.println("smartphone: " +nomeProduto );
+        System.out.println("Dados do Fone Bluetooth:");
+        System.out.println("smartphone: " +marcaProduto );
+         System.out.println("Dados do Fone Bluetooth:");
+        System.out.println("smartphone: " +preçoProduto );
+         System.out.println("Dados do Fone Bluetooth:");
+        System.out.println("smartphone: " +estoqueProduto );
         
         
