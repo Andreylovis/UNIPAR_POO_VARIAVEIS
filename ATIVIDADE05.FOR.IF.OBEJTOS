@@ -1,0 +1,55 @@
+public class Carro 
+
+public class CarroTeste {
+    public static void main(String[] args) {
+       
+        Carro carro1 = new Carro("Toyota", "Corolla", 2020, "Prata");
+
+        System.out.println("Informações iniciais do Carro:");
+        carro1.imprimirInformacoes();
+  
+        carro1.acelerar(50);
+        System.out.println("\nAcelerando...");
+        carro1.imprimirInformacoes();
+
+        carro1.frear(20);
+        System.out.println("\nFreando...");
+        carro1.imprimirInformacoes();
+    }
+}
+    private String marca;
+    private String modelo;
+    private int ano;
+    private String cor;
+    private double velocidade;
+
+    
+    public Carro(String marca, String modelo, int ano, String cor) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+        this.velocidade = 0
+    }
+
+
+    public void acelerar(double incremento) {
+        this.velocidade += incremento;
+    }
+
+    public void frear(double decremento) {
+        if (this.velocidade - decremento >= 0) {
+            this.velocidade -= decremento;
+        } else {
+            this.velocidade = 0;
+        }
+    }
+
+    public void imprimirInformacoes() {
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Ano: " + ano);
+        System.out.println("Cor: " + cor);
+        System.out.println("Velocidade: " + velocidade + " km/h");
+    }
+}
