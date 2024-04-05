@@ -1,0 +1,66 @@
+public class Produto {
+
+    private int codigo;
+    private String descricao;
+    private double preco;
+    private int quantidadeEmEstoque;
+
+    public Produto(int codigo, String descricao, double preco, int quantidadeEmEstoque) {
+        this.codigo = codigo;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    public class TesteProduto {
+        public static void main(String[] args) {
+         
+            Produto produto = new Produto(1, "Caneta", 1.5, 50);
+    
+            System.out.println("Código: " + produto.getCodigo());
+            System.out.println("Descrição: " + produto.getDescricao());
+            System.out.println("Preço: R$" + produto.getPreco());
+            System.out.println("Quantidade em estoque: " + produto.getQuantidadeEmEstoque());
+    
+            produto.adicionarEstoque(20);
+    
+            produto.removerEstoque(10);
+    
+            System.out.println("Quantidade em estoque: " + produto.getQuantidadeEmEstoque());
+        }
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
+    }
+
+    public void adicionarEstoque(int quantidade) {
+        if (quantidade > 0) {
+            quantidadeEmEstoque += quantidade;
+            System.out.println("Quantidade adicionada ao estoque: " + quantidade);
+        } else {
+            System.out.println("Quantidade inválida.");
+        }
+    }
+
+    public void removerEstoque(int quantidade) {
+        if (quantidade > 0 && quantidade <= quantidadeEmEstoque) {
+            quantidadeEmEstoque -= quantidade;
+            System.out.println("Quantidade removida do estoque: " + quantidade);
+        } else {
+            System.out.println("Quantidade inválida ou estoque insuficiente.");
+        }
+    }
+}
